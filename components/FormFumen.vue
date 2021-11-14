@@ -28,32 +28,32 @@
                 v-model="level.title.ja"
                 :rules="rules.title"
                 counter="50"
-                label="Title"
+                label="タイトル"
                 required
               />
               <v-text-field
                 v-model="level.artists.ja"
                 :rules="rules.artists"
                 counter="50"
-                label="Artists"
+                label="アーティスト"
                 required
               />
               <v-text-field
                 v-model="level.author.ja"
                 :rules="rules.author"
                 counter="30"
-                label="Author"
+                label="譜面作者"
                 required
               />
               <v-select
                 v-model="level.genre"
                 :items="genres"
-                label="Genre"
+                label="ジャンル"
               />
               <v-textarea
                 v-model="level.description.ja"
                 :rules="rules.description"
-                label="Description"
+                label="説明"
                 counter
                 maxlength="120"
                 full-width
@@ -62,7 +62,7 @@
               <v-slider
                 v-model="level.rating"
                 :rules="rules.rating"
-                label="Difficulty"
+                label="難易度"
                 hint="Im a hint"
                 thumb-label
                 max="50"
@@ -76,24 +76,24 @@
               <v-file-input
                 accept="image/png,image/jpeg"
                 prepend-icon="mdi-file-image"
-                :label="!isUpdateForm ? 'Select jacket (*.png, *.jpg)' : 'Select jacket (*.png, *.jpg) (Optional)'"
-                :rules="[v => !!v || isUpdateForm || 'File is mandatory']"
+                :label="!isUpdateForm ? 'ジェケット画像（pngまたはjpgファイル）' : 'ジャケット画像（任意、pngまたはjpgファイル）'"
+                :rules="[v => !!v || isUpdateForm || 'ジェケット画像は必須項目です。']"
                 @click:clear="files.cover = null"
                 @change="files.cover = $event"
               />
               <v-file-input
                 accept="audio/mpeg"
                 prepend-icon="mdi-music"
-                :label="!isUpdateForm ? 'Select music (*.mp3)' : 'Select music (*.mp3) (Optional)'"
-                :rules="[v => !!v || isUpdateForm || 'File is mandatory']"
+                :label="!isUpdateForm ? '音楽（mp3ファイル）' : '音楽（任意、mp3ファイル）'"
+                :rules="[v => !!v || isUpdateForm || '音楽は必須項目です。']"
                 @click:clear="files.bgm = null"
                 @change="files.bgm = $event"
               />
               <v-file-input
                 accept="text/json"
                 prepend-icon="mdi-file-music-outline"
-                :label="!isUpdateForm ? 'Select chart (data.sus)' : 'Select chart (data.sus) (Optional)'"
-                :rules="[v => !!v || isUpdateForm || 'File is mandatory']"
+                :label="!isUpdateForm ? '譜面（susファイル）' : '譜面〈任意、susファイル）'"
+                :rules="[v => !!v || isUpdateForm || '譜面は必須項目です。']"
                 @click:clear="files.data = null"
                 @change="files.data = $event"
               />
