@@ -91,3 +91,7 @@ sw.*
 static/sweet-potato-logo2.png
 static/sweet-potato-logo.png
 assets/json/defaultEngine.json
+
+
+# firebase
+.firebase
