@@ -17,7 +17,15 @@
             <nuxt-link to="/help/publish-fumen-rules">
               投稿ガイドライン
             </nuxt-link>
+            、
+            <a href="https://wiki.purplepalette.net/create-charts/publish">
+              譜面の投稿（Wiki）
+            </a>
             を必ずご確認ください!
+            <a href="https://wiki.purplepalette.net/create-charts/publish/testplay">
+              テストプレイ
+            </a>
+            の方法も掲載しています。
           </v-card-subtitle>
           <v-row justify="center">
             <v-col cols="12" lg="6">
