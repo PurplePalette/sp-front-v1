@@ -30,7 +30,7 @@ import { Vue, Component, Prop } from 'nuxt-property-decorator'
 @Component
 export default class UserBar extends Vue {
   @Prop({ type: String, default: 'https://cdn.discordapp.com/avatars/153112769724416000/9e10e1f28ff4fe9a13cca1d71002aaf9.png' })
-  avatarUrl!: string
+    avatarUrl!: string
 }
 </script>
 

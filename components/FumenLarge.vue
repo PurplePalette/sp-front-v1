@@ -20,7 +20,9 @@
       align="center"
       justify="end"
     >
-      <v-card-title class="display-5 mr-1" v-text="levelText" />
+      <v-card-title class="display-5 mr-1">
+        {{ levelText }}
+      </v-card-title>
     </v-row>
   </v-card>
 </template>

@@ -16,8 +16,9 @@
       style="cursor: pointer"
       color="white"
       @click="$router.push('/')"
-      v-text="title"
-    />
+    >
+      {{ title }}
+    </v-toolbar-title>
     <v-spacer />
     <GuestBar v-if="!logined" />
     <UserBar v-else :avatar-url="user.photoURL" />
