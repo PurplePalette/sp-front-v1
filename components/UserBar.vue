@@ -2,7 +2,7 @@
   <div>
     <v-btn
       to="/profile/fumen/upload"
-      class="hidden-md-and-down secondary no-hover"
+      class="secondary no-hover"
     >
       <v-icon>
         mdi-upload
@@ -11,7 +11,7 @@
     </v-btn>
     <v-btn
       to="/profile/account"
-      class="hidden-md-and-down no-hover"
+      class="no-hover"
       text
     >
       <img
@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'vue-property-decorator'
+import { Vue, Component, Prop } from 'nuxt-property-decorator'
 
 @Component
 export default class UserBar extends Vue {
