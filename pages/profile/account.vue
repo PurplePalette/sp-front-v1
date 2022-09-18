@@ -246,7 +246,8 @@ export default class Account extends Vue {
 
   get testServerAddress () : string {
     if (this.potatoUser) {
-      return `${this.$config.API_ENDPOINT}/tests/${this.potatoUser.testId}`
+      const base = `${this.$config.API_ENDPOINT}/tests/${this.potatoUser.testId}`
+      return base.replace('-legacy', '')
     }
     return '読込中'
   }

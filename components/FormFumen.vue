@@ -126,6 +126,7 @@
             利用規約に同意して投稿する
           </v-btn>
           <v-btn
+            v-if="isUpdateForm"
             block
             x-large
             color="error"
@@ -166,7 +167,7 @@
             <v-btn
               color="red darken-1"
               text
-              @click="deleteLevel(); openDeleteConfirm = false"
+              @click="deleteFumen(); openDeleteConfirm = false"
             >
               削除
             </v-btn>
@@ -323,8 +324,8 @@ export default class FormFumen extends Vue {
     return resp
   }
 
-  deleteFumen () {
-    // await this.$levelsApi.deleteLevel(this.level.name, this.requestOptions)
+  async deleteFumen () {
+    await this.$levelsApi.deleteLevel(this.level.name, this.requestOptions)
     alert('譜面情報を削除しました')
     this.$router.push('/profile/account')
   }
@@ -392,6 +393,9 @@ export default class FormFumen extends Vue {
       console.error(e)
     }
     this.uploadProgress = ''
+    setTimeout(() => {
+      this.$router.push('/profile/account')
+    }, 800)
   }
 }
 </script>
