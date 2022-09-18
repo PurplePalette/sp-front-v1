@@ -215,7 +215,7 @@ export default class Account extends Vue {
   }
 
   mounted () {
-    auth.onAuthStateChanged((user) => {
+    auth.onAuthStateChanged((user: any) => {
       if (user) {
         this.userName = user.displayName
         this.userPhoto = user.photoURL
@@ -246,7 +246,8 @@ export default class Account extends Vue {
 
   get testServerAddress () : string {
     if (this.potatoUser) {
-      return `${this.$config.API_ENDPOINT}/tests/${this.potatoUser.testId}`
+      const base = `${this.$config.API_ENDPOINT}/tests/${this.potatoUser.testId}`
+      return base.replace('-legacy', '')
     }
     return '読込中'
   }
