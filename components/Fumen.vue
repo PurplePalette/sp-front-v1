@@ -24,15 +24,15 @@
         </v-avatar>
       </v-badge>
       <div>
-        <v-card-title
-          class="display-5"
-          v-text="level.title"
-        />
-        <v-card-subtitle
-          class="display-6"
-          v-text="level.artist"
-        />
-        <v-card-subtitle class="display-6" v-text="level.author" />
+        <v-card-title class="display-5">
+          {{ level.title }}
+        </v-card-title>
+        <v-card-subtitle class="display-6">
+          {{ level.artist }}
+        </v-card-subtitle>
+        <v-card-subtitle class="display-6">
+          {{ level.author }}
+        </v-card-subtitle>
       </div>
       <!--
       <v-row v-if="!level.public" align="center" justify="end">
