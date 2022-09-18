@@ -64,7 +64,7 @@ export default class Header extends Vue {
   }
 
   mounted () : void {
-    auth.onAuthStateChanged((user) => {
+    auth.onAuthStateChanged((user: any) => {
       if (user) {
         this.logined = true
         this.user = user

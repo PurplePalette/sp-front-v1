@@ -1,5 +1,6 @@
-import firebase from 'firebase/app'
-import 'firebase/auth'
+import { initializeApp } from 'firebase/app'
+import { getAuth, GoogleAuthProvider } from 'firebase/auth'
+import type { Auth, User } from 'firebase/auth'
 
 // SDKを使用するためのConfig情報
 const firebaseConfig = {
@@ -13,17 +14,17 @@ const firebaseConfig = {
 }
 
 // Appの初期化
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig)
-}
+const firebaseApp = initializeApp(firebaseConfig)
 
-const auth = firebase.auth()
+const auth = getAuth(firebaseApp)
 
+/*
 if (process.env.NODE_ENV !== 'production') {
   auth.useEmulator('http://localhost:9099/')
 }
+*/
 
 export { auth }
-export const google = new firebase.auth.GoogleAuthProvider()
-export type FirebaseAuth = firebase.auth.Auth
-export type FirebaseUser = firebase.User
+export const google = new GoogleAuthProvider()
+export type FirebaseAuth = Auth
+export type FirebaseUser = User

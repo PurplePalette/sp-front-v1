@@ -1,5 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
-
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -170,21 +168,7 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: false,
-      themes: {
-        light: {
-          primary: colors.purple.base,
-          secondary: '#673AB7',
-          accent: colors.indigo.base,
-          error: colors.pink.base,
-          warning: colors.amber.base,
-          info: colors.teal.base,
-          success: colors.green.base
-        }
-      }
-    }
+    optionsPath: './vuetify.config.js'
   },
 
   publicRuntimeConfig: {

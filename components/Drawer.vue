@@ -59,6 +59,7 @@
 
 <script lang="ts">
 import { Component, Vue, PropSync } from 'nuxt-property-decorator'
+import { signInWithRedirect } from 'firebase/auth'
 import { auth, google } from '~/plugins/firebase'
 
 @Component
@@ -107,7 +108,7 @@ export default class Drawer extends Vue {
   ]
 
   loginToAccount () : void {
-    auth.signInWithRedirect(google)
+    signInWithRedirect(auth, google)
   }
 }
 </script>
