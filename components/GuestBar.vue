@@ -12,13 +12,14 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from 'vue-property-decorator'
+import { Vue, Component } from 'nuxt-property-decorator'
+import { signInWithRedirect } from 'firebase/auth'
 import { auth, google } from '~/plugins/firebase'
 
 @Component
 export default class GuestBar extends Vue {
   login (): void {
-    auth.signInWithRedirect(google)
+    signInWithRedirect(auth, google)
   }
 }
 </script>
