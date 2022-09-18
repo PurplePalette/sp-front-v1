@@ -295,7 +295,7 @@ export default class FormFumen extends Vue {
   }
 
   mounted () {
-    auth.onAuthStateChanged((user) => {
+    auth.onAuthStateChanged((user: any) => {
       if (!user) {
         this.$router.push('/')
       }

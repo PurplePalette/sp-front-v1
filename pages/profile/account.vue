@@ -215,7 +215,7 @@ export default class Account extends Vue {
   }
 
   mounted () {
-    auth.onAuthStateChanged((user) => {
+    auth.onAuthStateChanged((user: any) => {
       if (user) {
         this.userName = user.displayName
         this.userPhoto = user.photoURL
