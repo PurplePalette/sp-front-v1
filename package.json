@@ -31,7 +31,7 @@
     "nuxt-precompress": "^0.5.9",
     "nuxt-property-decorator": "^2.9.1",
     "nuxt-purgecss": "^1.0.0",
-    "save": "^2.5.0",
+    "save": "^2.9.0",
     "vue": "^2.7.10",
     "vuetify": "^2.6.10",
     "vuex-persistedstate": "^4.0.0"
